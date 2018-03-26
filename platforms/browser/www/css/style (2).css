@@ -1,0 +1,17 @@
+body{
+	background-image: url("img/1.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+	margin-top: 0%;
+	background-repeat: no-repeat;
+	
+
+}
+#wd{
+	max-width: 100%;
+	font-size: 50px;
+	margin-left: 55px;
+	margin-top: 20px;
+}
+#ic1{
+	font-size: 50px;
