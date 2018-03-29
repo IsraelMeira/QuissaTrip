@@ -8457,6 +8457,7 @@ pre {
 }
 #fh5co-footer .fh5co-copyright small {
   font-size: 12px;
+
 }
 #fh5co-footer .fh5co-lead {
   font-size: 13px;
@@ -9031,11 +9032,10 @@ a > img.fh5co-align-center {
   color: #555;
 }
 .mais{
-  margin-top: -10%;
+  margin-top:-30px;
 }
 #map {
         margin-left: -6px;
-
       }
   #l1{
     width: 300px;
@@ -9087,4 +9087,13 @@ a > img.fh5co-align-center {
     }
 #imk{
   display: none;
+}
+.tab-content2{
+  height: -400px;
+}
+
+/*# QR code*/
+
+#qr{
+
 }
