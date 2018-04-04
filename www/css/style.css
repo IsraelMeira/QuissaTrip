@@ -9044,6 +9044,7 @@ a > img.fh5co-align-center {
 }
 .mais{
   margin-top:-30px;
+  background-color: none;
 }
 #map {
         margin-left: -6px;
@@ -9082,7 +9083,7 @@ a > img.fh5co-align-center {
    margin-left: 25%;
   }
   .img-icon3{
-   margin-top: -20%;
+   margin-top: -17%;
    margin-left: 80%;
   }
   .pc{
@@ -9091,10 +9092,10 @@ a > img.fh5co-align-center {
   }
   .pc1{
     margin-left: 40%;
-    margin-top: -15.5%;
+    margin-top: -14%;
   }.pc2{
     margin-left: 77%;
-    margin-top: -15.5%;
+    margin-top: -13.5%;
     }
 #imk{
   display: none;
