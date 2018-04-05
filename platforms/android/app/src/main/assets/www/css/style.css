@@ -9107,6 +9107,7 @@ a > img.fh5co-align-center {
 /*# QR code*/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #qr{
 
 }
@@ -9163,6 +9164,11 @@ a > img.fh5co-align-center {
   position: absolute;
   bottom: 1.5%;
   left: 30%;
+=======
+#final{
+  margin: auto; 
+ color: red;
+>>>>>>> 158f78f861d38334aa206f8b2b61b6374978249c
 =======
 #final{
   margin: auto; 
