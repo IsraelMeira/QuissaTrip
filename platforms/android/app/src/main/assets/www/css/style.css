@@ -229,6 +229,18 @@ th {
   padding: 0;
 }
 
+#pop{
+display:none;
+position:absolute;
+top:0%;
+left:auto%;
+padding:10px;
+width:300px;
+height:350px;
+border:1px solid #d0d0d0;
+background-color:#ddd;
+}
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -8968,18 +8980,17 @@ a > img.fh5co-align-center {
   }
 
   body{
-    background-color: #ddd;
     font-family: "Montserrat", arial, sans-serif;
   }
 
   .nav_tabs{
     width: 320px;
-    height: 800px;
+    height:100% auto;
     margin: 100px auto;
     background-color: #fff;
     position: relative;
-  }
 
+  }
   .nav_tabs ul{
     list-style: none;
   }
@@ -9033,6 +9044,7 @@ a > img.fh5co-align-center {
 }
 .mais{
   margin-top:-30px;
+  background-color: none;
 }
 #map {
         margin-left: -6px;
@@ -9071,7 +9083,7 @@ a > img.fh5co-align-center {
    margin-left: 25%;
   }
   .img-icon3{
-   margin-top: -20%;
+   margin-top: -17%;
    margin-left: 80%;
   }
   .pc{
@@ -9080,10 +9092,10 @@ a > img.fh5co-align-center {
   }
   .pc1{
     margin-left: 40%;
-    margin-top: -15.5%;
+    margin-top: -14%;
   }.pc2{
     margin-left: 77%;
-    margin-top: -15.5%;
+    margin-top: -13.5%;
     }
 #imk{
   display: none;
@@ -9094,6 +9106,7 @@ a > img.fh5co-align-center {
 
 /*# QR code*/
 
+<<<<<<< HEAD
 #qr{
 
 }
@@ -9150,4 +9163,9 @@ a > img.fh5co-align-center {
   position: absolute;
   bottom: 1.5%;
   left: 30%;
+=======
+#final{
+  margin: auto; 
+ color: red;
+>>>>>>> 158f78f861d38334aa206f8b2b61b6374978249c
 }
