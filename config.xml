@@ -9,4 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

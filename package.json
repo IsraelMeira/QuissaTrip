@@ -1,0 +1,17 @@
+{
+  "name": "com.creativelfi.quissatrip",
+  "version": "1.0.0",
+  "displayName": "QuissaTrip",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-inappbrowser": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~7.0.0",
+    "cordova-plugin-inappbrowser": "^2.0.2"
+  }
+}
