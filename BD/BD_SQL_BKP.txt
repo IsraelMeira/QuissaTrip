@@ -1,3 +1,6 @@
+CREATE DATABASE  IF NOT EXISTS `quissatrip`;
+USE `quissatrip`;
+
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id_usuario` int NOT NULL AUTO_INCREMENT,
@@ -31,4 +34,15 @@ CREATE TABLE `qualificacao` (
   PRIMARY KEY (`id_qualificacao`),
   CONSTRAINT `id_usuario_q` FOREIGN KEY (`id_usuario_q`) REFERENCES `usuarios` (`id_usuario`),
   UNIQUE KEY `id_qualificacao_UNIQUE` (`id_qualificacao`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `d_imagens`;
+  CREATE TABLE `d_imagens` (
+  `id_imagem` int NOT NULL AUTO_INCREMENT,
+  `nome_imagem` varchar(25) NOT NULL,
+  `tamanho_imagem` varchar(25) NOT NULL,
+  `tipo_imagem` varchar(25) NOT NULL,
+  `imagem` longblob NOT NULL,
+  PRIMARY KEY (`id_imagem`),
+  UNIQUE KEY `id_imagem_UNIQUE` (`id_imagem`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

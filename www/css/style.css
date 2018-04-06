@@ -228,19 +228,6 @@ td,
 th {
   padding: 0;
 }
-
-#pop{
-display:none;
-position:absolute;
-top:0%;
-left:auto%;
-padding:10px;
-width:300px;
-height:350px;
-border:1px solid #d0d0d0;
-background-color:#ddd;
-}
-
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -9164,14 +9151,11 @@ a > img.fh5co-align-center {
   position: absolute;
   bottom: 1.5%;
   left: 30%;
-=======
-#final{
-  margin: auto; 
- color: red;
->>>>>>> 158f78f861d38334aa206f8b2b61b6374978249c
-=======
-#final{
-  margin: auto; 
- color: red;
->>>>>>> 158f78f861d38334aa206f8b2b61b6374978249c
+}
+.btnu{
+  width: 140px;
+  height: 65px;
+  background-color: black;
+  border-radius: 70px;
+  margin-top: 10%;
 }
