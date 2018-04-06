@@ -1,0 +1,34 @@
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE `usuarios` (
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
+  `nome_completo` varchar(100) NOT NULL,
+  `nickname` varchar(45) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `imagem_perfil` varbinary(65000) NOT NULL,
+  PRIMARY KEY (`id_usuario`),
+  UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`),
+  UNIQUE KEY `nickname_UNIQUE` (`nickname`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `postagens`;
+CREATE TABLE `postagens` (
+  `id_usuario_p` int NOT NULL,
+  `id_postagem` int NOT NULL AUTO_INCREMENT,
+  `imagem_p` varbinary(65000) NOT NULL,
+  `datahora_p` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_postagem`),
+  CONSTRAINT `id_usuario_p` FOREIGN KEY (`id_usuario_p`) REFERENCES `usuarios` (`id_usuario`),
+  UNIQUE KEY `id_postagem_UNIQUE` (`id_postagem`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `qualificacao`;
+CREATE TABLE `qualificacao` (
+  `id_usuario_q` int NOT NULL,
+  `id_qualificacao` int NOT NULL AUTO_INCREMENT,
+  `text_coment` varchar(1000) NOT NULL,
+  `datahora_q` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_qualificacao`),
+  CONSTRAINT `id_usuario_q` FOREIGN KEY (`id_usuario_q`) REFERENCES `usuarios` (`id_usuario`),
+  UNIQUE KEY `id_qualificacao_UNIQUE` (`id_qualificacao`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
