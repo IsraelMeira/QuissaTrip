@@ -5,13 +5,11 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   `nome_completo` varchar(100) NOT NULL,
-  `nickname` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `imagem_perfil` varbinary(65000) NOT NULL,
   PRIMARY KEY (`id_usuario`),
-  UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`),
-  UNIQUE KEY `nickname_UNIQUE` (`nickname`)
+  UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `postagens`;
