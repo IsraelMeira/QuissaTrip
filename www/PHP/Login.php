@@ -18,7 +18,7 @@
   			     $_SESSION['usuarioPHP']['nome'] = $usuarioBD['nome_completo'];
   			     $_SESSION['usuarioPHP']['email'] = $usuarioBD['email'];
              $_SESSION['usuarioPHP']['id'] = $usuarioBD['id_usuario'];
-  			     header("Location: ../page/p2-user.html");
+  			     header("Location: ../page/p2-user.php");
   		  } else {
           echo "<script>alert('Email ou Senha Incorretos!'); document.location.href='../Index.html';</script>";
   		  }

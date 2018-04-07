@@ -1,3 +1,10 @@
+<?php
+	header("Content-Type: text/html; charset=ISO-8859-1",true);
+    require_once("../PHP/Config.php");
+    $id = $_SESSION['usuarioPHP']['id'];
+    $nome = $_SESSION['usuarioPHP']['nome'];
+    $email = $_SESSION['usuarioPHP']['email'];
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -114,10 +121,11 @@
 
 						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
 						    			<blockquote>
+						    				<a href="../PHP/doLogout.php"><button style="width:5%; border-radius: 50%;"><h4>X</h4></button></a>
 						    				<h4><em>Nome:</em></h4>
-						    				<p>Luís Alberto Chagas</p>
+						    				<p><?php echo $nome?></p>
 						    				<h4><em>E-mail:</em></h4>
-						    				<p>Luísal.22@gmail.com</p>
+						    				<p><?php echo $email?></p>
 						    				<center><a href="../page/role.html"><button class="btnu"> Rolê</button></p></a></center>
 						    			</blockquote>
 						    			<br>

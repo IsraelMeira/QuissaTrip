@@ -16,7 +16,7 @@ $conexao = $config->conectaBanco();
         $query = "INSERT INTO usuarios (nome_completo, email, senha, id_usuario) VALUES (\"$nome_completo\", \"$email\", \"$senha\", NULL)";
         if($result = mysqli_query($conexao,$query)) {
           echo "Seu cadastro foi realizado com sucesso!";
-          header("location: ../page/p2-user.html");
+          header("location: ../page/p2-user.php");
         } else {
           echo "Error!";
         }
