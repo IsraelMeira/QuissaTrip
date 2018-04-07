@@ -1,4 +1,5 @@
 <?php
+  header("Access-Control-Allow-Origin: *");
   require("Config.php");
   $id = $_SESSION['usuarioPHP']['id'];
   $imagem = $_FILES['imagem']['tmp_name'];

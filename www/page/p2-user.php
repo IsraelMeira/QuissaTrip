@@ -1,4 +1,5 @@
 <?php
+	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: text/html; charset=ISO-8859-1",true);
     require_once("../PHP/Config.php");
     $id = $_SESSION['usuarioPHP']['id'];

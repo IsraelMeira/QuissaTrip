@@ -1,4 +1,5 @@
 <?php
+	header("Access-Control-Allow-Origin: *");
   	require("Config.php");
 	$config = new Config();
 	$conexao = $config->conectaBanco();
