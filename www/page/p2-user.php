@@ -116,7 +116,7 @@
 
 								<div >
 									<div >
-						    			<figure class="fh5co-vcard"><img src="../images/user.png" class="img-responsive"></figure>
+						    			<figure class="fh5co-vcard"><img src="../PHP/getimage.php" class="img-responsive"></figure>
 						    		</div>
 
 						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
@@ -138,27 +138,32 @@
 						    	<div>
 									<div >
 										<center><H2>Editar:</H2></center>
-						    			<figure class="fh5co-vcard"><img src="../images/user.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive" style="hover"></figure>
+						    			<figure class="fh5co-vcard"><img src="../PHP/getimage.php" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive" style="hover"></figure>
 						    		</div>
+						    		<form enctype="multipart/form-data" action="../PHP/Upload_perfil_img.php" method="post">
+  										<input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
+      									<div><input name="imagem" type="file"/></div>
+      									<div><input type="submit" value="Enviar"/></div>
+  										</form>
 						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
 						    			<blockquote>
 						    				<div id="fh5co-subscribe">
 					<div class="container">
 						<div class="row animate-box">
-							<form action="#" method="post">
+							<form action="../PHP/editar_p.php" method="post">
 								<div class="col-md-3 col-sm-3">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Seu nome:">
+										<input name="nome" type="text" class="form-control" placeholder="Seu Nome:">
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-3">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Nova Senha">
+										<input name="email" type="text" class="form-control" placeholder="Seu Email:">
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-3">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Repita a Senha">
+										<input name="senha" type="password" class="form-control" placeholder="Nova Senha">
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-3">

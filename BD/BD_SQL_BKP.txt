@@ -7,7 +7,7 @@ CREATE TABLE `usuarios` (
   `nome_completo` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(100) NOT NULL,
-  `imagem_perfil` varbinary(65000) NOT NULL,
+  `imagem` longblob NOT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
