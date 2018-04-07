@@ -9039,23 +9039,23 @@ a > img.fh5co-align-center {
   #l1{
     width: 300px;
     height: 100px;
-    background: #fff;
+    background: #eee;
     font-color: #fff;
     padding: 8px;
-    border: 2px solid #CCC;
+    border: 1px solid #eee;
     font-size: 20px;
-    border-radius: 7px;
+    border-radius: 4px;
     margin-bottom: 5px;
     text-align: center;
   }
   .i1{
-    border: 2px solid #CCC;
+    border: 1px solid #eee;
     
     border-radius: 100px;
   } 
   .p1{
     font-size: 14px;
-    margin-top: 18px;
+    margin-top: auto;
      font-family: "Montserrat", arial, sans-serif;
   }
   .text-title{
