@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 require_once("Config.php");
 $nome_completo = $_POST['nome_completo'];
 $email = $_POST['email'];
