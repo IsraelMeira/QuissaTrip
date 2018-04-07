@@ -21,7 +21,7 @@ $conexao = $config->conectaBanco();
           echo "Error!";
         }
       } else {
-        echo "<script>alert('Email ja Cadastrado!'); document.location.href='../Index.html';</script>";
+        echo "<script>alert('Email ja Cadastrado!'); document.location.href='../index.html';</script>";
       }
     } else {
       echo "Erro ao consultar o Banco de Dados!";
@@ -29,7 +29,7 @@ $conexao = $config->conectaBanco();
     $result->close();
     mysqli_close($conexao);
   } else {
-    echo "<script>alert('Preencha os campos corretamente!'); document.location.href='../Index.html';</script>";
+    echo "<script>alert('Preencha os campos corretamente!'); document.location.href='../index.html';</script>";
   }
   function checkValues($nome_completo, $email, $senha) {
     if(isset($nome_completo) && !empty($nome_completo) && isset($email) && !empty($email) && isset($senha) && !empty($senha)){

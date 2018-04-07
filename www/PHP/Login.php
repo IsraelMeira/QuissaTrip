@@ -20,11 +20,11 @@
              $_SESSION['usuarioPHP']['id'] = $usuarioBD['id_usuario'];
   			     header("Location: ../page/p2-user.php");
   		  } else {
-          echo "<script>alert('Email ou Senha Incorretos!'); document.location.href='../Index.html';</script>";
+          echo "<script>alert('Email ou Senha Incorretos!'); document.location.href='../index.html';</script>";
   		  }
       }
     } else {
-      echo "<script>alert('Preencha os campos corretamente!'); document.location.href='../Index.html';</script>";
+      echo "<script>alert('Preencha os campos corretamente!'); document.location.href='../index.html';</script>";
     }
   }
   function checkValues($email, $senha) {
