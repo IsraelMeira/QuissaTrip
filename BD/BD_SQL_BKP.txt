@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS `postagens`;
 CREATE TABLE `postagens` (
   `id_usuario_p` int NOT NULL,
   `id_postagem` int NOT NULL AUTO_INCREMENT,
-  `imagem_p` varbinary(65000) NOT NULL,
+  `imagem_p` longblob NOT NULL,
   `datahora_p` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_postagem`),
   CONSTRAINT `id_usuario_p` FOREIGN KEY (`id_usuario_p`) REFERENCES `usuarios` (`id_usuario`),

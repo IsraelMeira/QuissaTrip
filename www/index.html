@@ -4,6 +4,8 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"> 
     <meta charset="utf-8">
@@ -64,6 +66,7 @@
 
 	</head>
 	<body>
+		<p><button onclick="app.capturePhoto()">Capturar Foto</button></p>
 	<div id="fh5co-offcanvass">
 		<ul>
 			<li class="active"><a href="#" data-nav-section="home">Início</a></li>
@@ -73,7 +76,7 @@
 			<li><a href="page/p2-hos.html"><i class="icon-hotel">    Hospedagem</i></a></li>
 			<li><a href="page/p2-al.html" ><i class="icon-cup">       Alimentação</i></a></li>
 			<li><a href="page/p2-el.html" ><i class="icon-rocket">       Eventos & Lazer</i></a></li>
-			<li><a href="page/role.html" ><i class="icon-camera">   Rolê</i></a></li>
+			<li><a href="page/role.php" ><i class="icon-camera">   Rolê</i></a></li>
 			<li><a href="page/p2-tr.html" ><i class="icon-taxi">     Transportes</i></a></li>
 			<li><a href="page/p2-up.html" ><i class="icon-people">    Ultilidade Pública</i></a></li>
 		</ul>
@@ -106,7 +109,7 @@
 								
 								
 
-								<center><p class="to-animate intro-animate-3"><a href="page/role.html" class="btn btn-primary btn-md"><i class="icon-camera"></i>  Rolê</a></p></center>
+								<center><p class="to-animate intro-animate-3"><a href="page/role.php" class="btn btn-primary btn-md"><i class="icon-camera"></i>  Rolê</a></p></center>
 								<center><p class="to-animate intro-animate-3"><a data-nav-section="testimonies" class="btn btn-primary btn-md"><i class="icon-user"></i>  Login/Cadastro</a></p></center>
 							<div class="col-md-6 text-right fh5co-intro-img to-animate intro-animate-4">
 								<center><img src="css/img/Q.png" alt="Outline Free HTML5 Responsive Bootstrap Template"></center>
@@ -140,14 +143,14 @@
 								<p class="fh5co-sub to-animate">Em 9 de agosto de 1627, as terras compreendidas entre o Rio Macaé e o Cabo de São Tomé, aí incluídas as terras de Quissamã, foram doadas por sesmarias aos "Sete Capitães" (Miguel Aires Maldonado, Gonçalo Correa, Duarte Correa, Manoel Correa, Antônio Pinto, João de Castilho, Miguel Riscado), por Martim de Sá, em pagamento por serviços prestados à Coroa Portuguesa.</p>
 							</div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a onclick="navigator.app.loadUrl('https://www.quissama.rj.gov.br/site/espacos_culturais', { openExternal:true }" href="https://www.quissama.rj.gov.br/site/espacos_culturais" class="fh5co-feature to-animate">
+								<a href="https://www.quissama.rj.gov.br/site/espacos_culturais" class="fh5co-feature to-animate">
 									<span class="fh5co-feature-icon"><i class="icon-book"></i></span>
 									<h3 class="fh5co-feature-lead">Espaços cuturais</h3>
 									<p class="fh5co-feature-text">Conheça Mais Sobre Nossos Espaços Culturais!</p>
 								</a>
 							</div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a onclick="navigator.app.loadUrl('https://www.quissama.rj.gov.br/site/noticias', { openExternal:true }" href="https://www.quissama.rj.gov.br/site/noticias" class="fh5co-feature to-animate">
+								<a href="https://www.quissama.rj.gov.br/site/noticias" class="fh5co-feature to-animate">
 									<span class="fh5co-feature-icon"><i class="icon-screen-smartphone"></i></span>
 									<h3 class="fh5co-feature-lead">Notícias</h3>
 									<p class="fh5co-feature-text">Fique por dentro do que está rolando na cidade!</p>
@@ -155,14 +158,14 @@
 							</div>
 							<div class="clearfix visible-sm-block"></div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a onclick="navigator.app.loadUrl('https://www.quissama.rj.gov.br/site/eventos', { openExternal:true }" href="https://www.quissama.rj.gov.br/site/eventos" class="fh5co-feature to-animate">
+								<a href="https://www.quissama.rj.gov.br/site/eventos" class="fh5co-feature to-animate">
 									<span class="fh5co-feature-icon"><i class="icon-eye"></i></span>
 									<h3 class="fh5co-feature-lead">Eventos</h3>
 									<p class="fh5co-feature-text">Saiba Mais Sobre Nossos Eventos!</p>
 								</a>
 							</div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-								<a onclick="navigator.app.loadUrl('https://www.quissama.rj.gov.br/site/pagina/historico/24/2', { openExternal:true }" href="https://www.quissama.rj.gov.br/site/pagina/historico/24/2" class="fh5co-feature to-animate">
+								<a href="https://www.quissama.rj.gov.br/site/pagina/historico/24/2" class="fh5co-feature to-animate">
 									<span class="fh5co-feature-icon"><i class="icon-history"></i></span>
 									<h3 class="fh5co-feature-lead">Histórico</h3>
 									<p class="fh5co-feature-text">Conheça o histórico de nossa cidade!</p>
@@ -174,7 +177,7 @@
 							<div class="fh5co-spacer fh5co-spacer-sm"></div>
 
 							<div class="col-md-4 col-md-offset-4 text-center to-animate">
-								<a onclick="navigator.app.loadUrl('https://www.quissama.rj.gov.br/home', { openExternal:true }" href="https://www.quissama.rj.gov.br/home" class="btn btn-primary">Conheça o nosso site</a>
+								<a href="https://www.quissama.rj.gov.br/home" class="btn btn-primary">Conheça o nosso site</a>
 							</div>
 			        	</div>
 			       </div>
@@ -477,8 +480,13 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
-	<!-- Url -->
-	<script src="js/url.js"></script>
-
+	<!-- App js -->
+	<script src="js/camera.js"></script>
+    <script type="text/javascript">
+            app.initialize();
+    </script>
+    <script type="text/javascript">
+            alert('Teste!');
+    </script>
 	</body>
 </html>

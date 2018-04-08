@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../css/style.css"> 
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
@@ -85,7 +84,7 @@
 			<li><a href="p2-hos.html" ><i class="icon-hotel">    Hospedagem</i></a></li>
 			<li><a href="p2-al.html" ><i class="icon-cup">       Alimentação</i></a></li>
 			<li><a href="p2-el.html" ><i class="icon-rocket">       Eventos & Lazer</i></a></li>
-			<li><a href="role.html" ><i class="icon-camera">   Rolê</i></a></li>
+			<li><a href="role.php" ><i class="icon-camera">   Rolê</i></a></li>
 			<li><a href="p2-tr.html" ><i class="icon-taxi">     Transportes</i></a></li>
 			<li><a href="p2-up.html" ><i class="icon-people">    Ultilidade Pública</i></a></li>
 		</ul>
@@ -122,7 +121,7 @@
 
 						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
 						    			<blockquote>
-						    				<a href="../PHP/doLogout.php"><button style="width:5%; border-radius: 50%;"><h4>X</h4></button></a>
+						    				<a href="../PHP/doLogout.php"><button style="width:35px; height: 40px; border-radius: 50%;"><h4>X</h4></button></a>
 						    				<h4><em>Nome:</em></h4>
 						    				<p><?php echo $nome?></p>
 						    				<h4><em>E-mail:</em></h4>
@@ -144,12 +143,12 @@
 						    	<div>
 									<div >
 										<center><H2>Editar:</H2></center>
-						    			<figure class="fh5co-vcard"><img src="../PHP/getimage.php" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive" style="hover"></figure>
+						    			<figure class="fh5co-vcard"><img src="../PHP/getimage.php" class="img-responsive" style="hover"></figure>
 						    		</div>
 						    		<form enctype="multipart/form-data" action="../PHP/Upload_perfil_img.php" method="post">
   										<input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
       									<div><input name="imagem" type="file"/></div>
-      									<div><input type="submit" value="Enviar"/></div>
+      									<div><input style="color: black;" type="submit" value="Enviar"/></div>
   										</form>
 						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
 						    			<blockquote>
@@ -203,7 +202,7 @@
 				</div>
 			
 			
-		<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="../js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
@@ -218,6 +217,8 @@
 	<script src="../js/jquery.countTo.js"></script>
 	<!-- Main JS -->
 	<script src="../js/main.js"></script>
+	<!-- App js -->
+	<script src="js/app.js"></script>
 
 	
 
