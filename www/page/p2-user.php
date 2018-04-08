@@ -126,7 +126,7 @@
 						    				<p><?php echo $nome?></p>
 						    				<h4><em>E-mail:</em></h4>
 						    				<p><?php echo $email?></p>
-						    				<center><a href="../page/role.html"><button class="btnu"> Rolê</button></p></a></center>
+						    				<center><a href="../page/role.php"><button class="btnu"> Rolê</button></p></a></center>
 						    			</blockquote>
 						    			<br>
 						    			
