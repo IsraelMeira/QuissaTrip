@@ -5,7 +5,7 @@
   $config = new Config();
   $conexao = $config->conectaBanco();
   if(isset($_SESSION['usuarioPHP'])){
-    header("location: ../page/p2-user.html");
+    header("location: ../page/p2-user.php");
   } else {
     if(checkValues($_POST['login'], $_POST['senha'])){
       if($_SERVER["REQUEST_METHOD"] == "POST") {
