@@ -12,6 +12,9 @@
     },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.creativelfi.quissatrip"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.creativelfi.quissatrip"
     }
   },
   "dependent_plugins": {}

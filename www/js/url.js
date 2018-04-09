@@ -1,25 +1,22 @@
-document.addEventListener('deviceready', onDeviceReady, false);
-
+document.addEventListener('deviceready', this.onDeviceReady, false);
 function onDeviceReady() {
-
-    // Mock device.platform property if not available
+     // Mock device.platform property if not available
     if (!window.device) {
         window.device = { platform: 'Browser' };
     }
-
     handleExternalURLs();
 }
 
 function handleExternalURLs() {
     // Handle click events for all external URLs
-    if (device.platform.toUpperCase() === 'ANDROID') {
+    if (device.platform.toUpperCase() === 'Android') {
         $(document).on('click', 'a[href^="http"]', function (e) {
             var url = $(this).attr('href');
             navigator.app.loadUrl(url, { openExternal: true });
             e.preventDefault();
         });
     }
-    else if (device.platform.toUpperCase() === 'IOS') {
+    else if (device.platform.toUpperCase() === 'iPhone') {
         $(document).on('click', 'a[href^="http"]', function (e) {
             var url = $(this).attr('href');
             window.open(url, '_system');
