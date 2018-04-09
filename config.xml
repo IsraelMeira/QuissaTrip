@@ -2,8 +2,16 @@
 <widget id="com.creativelfi.quissatrip" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>QuissaTrip</name>
     <description>
-        A blank PhoneGap app.
+        Turismo Quissamã.
     </description>
+    <platform name="android">
+        <icon src="icon/icon_ldpi.png" density="ldpi" />
+        <icon src="icon/icon_mdpi.png" density="mdpi" />
+        <icon src="icon/icon_hdpi.png" density="hdpi" />
+        <icon src="icon/icon_xhdpi.png" density="xhdpi" />
+        <icon src="icon/icon_xxhdpi.png" density="xxhdpi" />
+        <icon src="icon/icon_xxxhdpi.png" density="xxxhdpi" />
+    </platform>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
