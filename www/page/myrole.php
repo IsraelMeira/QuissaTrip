@@ -2,11 +2,10 @@
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: text/html; charset=ISO-8859-1",true);
     require_once("../PHP/Config.php");
-    $id = $_SESSION['usuarioPHP']['id'];
-    $nome = $_SESSION['usuarioPHP']['nome'];
-    $email = $_SESSION['usuarioPHP']['email'];
+	$config = new Config();
+	$conexao = $config->conectaBanco();
+   $id = $_SESSION['usuarioPHP']['id'];
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,6 +15,7 @@
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    <link rel="stylesheet" href="../css/style.css">
    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+   <meta charset="utf-8">
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,17 +65,17 @@
    <script src="../js/respond.min.js"></script>
    <![endif]-->
 </head>
-<body>
+<body style="background: #4fd2c2;">
    <div id="fh5co-offcanvass">
       <ul>
          <li class="active"><a href="../index_usuario.html" data-nav-section="home">Início</a></li>
-         <li><a href="#" ><i class="icon-user ">  Usuário</i> </a></li>
+         <li><a href="p2-user.php" ><i class="icon-user ">  Usuário</i> </a></li>
          <li><a href="p2-to.html" ><i class="icon-screen-smartphone">    Tour</i></a></li>
          <li><a href="p2-pt.html" ><i class="icon-map">    Pontos Turísticos</i></a></li>
          <li><a href="p2-hos.html" ><i class="icon-hotel">    Hospedagem</i></a></li>
          <li><a href="p2-al.html" ><i class="icon-cup">       Alimentação</i></a></li>
          <li><a href="p2-el.html" ><i class="icon-rocket">       Eventos & Lazer</i></a></li>
-         <li><a href="role.php" ><i class="icon-camera">   Rolê</i></a></li>
+         <li><a href="#" ><i class="icon-camera">   Rolê</i></a></li>
          <li><a href="p2-tr.html" ><i class="icon-taxi">     Transportes</i></a></li>
          <li><a href="p2-up.html" ><i class="icon-people">    Ultilidade Pública</i></a></li>
       </ul>
@@ -91,86 +91,37 @@
          </div>
       </div>
    </div>
+   <div class="role_nav">
+      <button onclick="window.location.href='p2-user.php'" class="role_icon"><img src="../PHP/getimage.php" class="img-circle" style="position: relative; max-width: 100%; height: 100%;"></button>
+      <button onclick="window.location.href='../PHP/imagens_postagens/index.php'" class="role_icon"><img src="../css/camera.png" style="display: block; margin-left: auto; margin-right: auto; position: relative; max-width: 80%; height: 80%; top:1px;"></button>
+      <button onclick="window.location.href='role.php'" class="role_icon"></button>
+   </div>
    <div id="fh5co-page">
-   <div id="fh5co-wrap">
-   <div class="fh5co-intro">
-   <div class="container">
-      <div class="row">
-         <div id="fh5co-testimony" data-section="testimonies">
-            <div >
-               <div >
-                  <div class="owl-carousel">
-                     <div >
-                        <center><div>
-                           <figure class="fh5co-vcard"><img src="../PHP/getimage.php" class="img-responsive"></figure>
-                           <a href="../PHP/doLogout.php">
-                                 <button style="padding: 0; border: none; background: none; background-color: #f26565; position: absolute; top: 70px; right: 150px; width:35px; height: 40px; border-radius: 50%;">
-                                    <h4>X</h4>
-                                 </button>
-                              </a>
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-                           <blockquote>
-                              <h3 style="color: black;"><em><b>Nome:</b></em></h4>
-                              <p><b><?php echo $nome?></b></p>
-                              <h3 style="color:black;"><em><b>E-mail:</b></em></h4>
-                              <p><b><?php echo $email?></b></p>
-                              <center><a href="../page/myrole.php"><button style="background-color:black; opacity: 0.7; "  class="btn btn-primary"> Galeria </button></p></a></center>
-                           </blockquote>
-                           <br>
-                           <br>
-                           <center><img class="qq" src="../css/img/Q.png" alt="Outline Free HTML5 Responsive Bootstrap Template"></center>
-                           <p class="fh5co-author fh5co-uppercase-sm"><span>Prefeitura de</span> Quissamã.</p>
-                        </div>
-                     </div></center>
-                     <div>
-                        <div >
-                           <center>
-                              <H2 style="color:black;">Editar:</H2>
-                           </center>
-                           <figure class="fh5co-vcard"><img src="../PHP/getimage.php" class="img-responsive" style="hover"></figure>
-                        </div>
-                        <form enctype="multipart/form-data" action="../PHP/Upload_perfil_img.php" method="post">
-                           <center>
-                           	<input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
-                           	<div><input name="imagem" type="file"/></div>
-                           	<div><input style="background-color:black; opacity: 0.7;" class="btn btn-primary" type="submit" value="Enviar"/></div>
-                           </center>
-                        </form>
-                        <div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-                           <blockquote>
-                              <div id="fh5co-subscribe">
-                                 <div class="container">
-                                    <div class="row animate-box">
-                                       <form action="../PHP/editar_p.php" method="post">
-                                          <div class="col-md-3 col-sm-3">
-                                             <div class="form-group">
-                                                <input name="nome" type="text" class="form-control" placeholder="Seu Nome:">
-                                             </div>
-                                          </div>
-                                          <div class="col-md-3 col-sm-3">
-                                             <div class="form-group">
-                                                <input name="email" type="text" class="form-control" placeholder="Seu Email:">
-                                             </div>
-                                          </div>
-                                          <div class="col-md-3 col-sm-3">
-                                             <div class="form-group">
-                                                <input name="senha" type="password" class="form-control" placeholder="Nova Senha">
-                                             </div>
-                                          </div>
-                                          <div class="col-md-3 col-sm-3">
-                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-primary" value="Enviar">
-                                             </div>
-                                          </div>
-                                       </form>
-                                    </div>
-                                 </div>
-                           </blockquote>
-                           <p class="fh5co-author fh5co-uppercase-sm"><span>Prefeitura de</span> Quissamã.</p>
-                           </div>
+      <div id="fh5co-wrap">
+         <div class="fh5co-intro">
+            <div class="container">
+               <div class="row">
+                  <div id="fh5co-testimony" data-section="testimonies">
+                     <?php
+                        $sql = mysqli_query($conexao,"SELECT * FROM postagens WHERE id_usuario_p = \"$id\" ORDER BY datahora_p DESC");
+                        $conta = mysqli_num_rows($sql);
+                        if($conta <= 0){
+                        	echo '<h2>Sem Postagens...</h2>';
+                        } else {
+                        	while($res = mysqli_fetch_array($sql)){
+                        		$id_u = $res['id_usuario_p'];
+                        		$nome_u = mysqli_fetch_array(mysqli_query($conexao,"SELECT * FROM usuarios WHERE id_usuario = \"$id_u\""));
+                        ?>
+                     <div class="pic_post">
+                        <?php echo '<img class="pic_img" src="data:image/jpeg;base64,' . base64_encode($res['imagem_p']) . '"/>'; ?>
+                        <div class="post_info">
+                           <?php echo '<img class="profile_img" src="data:image/jpeg;base64,' . base64_encode($nome_u['imagem']) . '" />'; ?>
+                           <p class="post_date"><?php echo $res['datahora_p']; ?></p>
+                           <p class="profile_name"><?php echo $nome_u['nome_completo']; ?></p>
                         </div>
                      </div>
+                     <br>
+                     <?php }} ?>
                   </div>
                </div>
             </div>
@@ -193,6 +144,6 @@
    <!-- Main JS -->
    <script src="../js/main.js"></script>
    <!-- App js -->
-   <script src="js/app.js"></script>
+   <script src="../js/app.js"></script>
 </body>
 </html>
