@@ -9117,13 +9117,13 @@ a > img.fh5co-align-center {
   z-index: 999;
 }
 .role_icon{
-  background-color: #9933ff;
+  background-color: white /*#9933ff #4fd2c2 #fc2a05*/;
   position: relative;
   width: 60px;
   height: 50px;
   margin: auto;
   display: block;
-  border: 1px solid grey;
+  border: 0px solid grey;
   border-radius: 50%;
 }
 .pic_post{

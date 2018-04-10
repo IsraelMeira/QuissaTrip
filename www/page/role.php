@@ -93,7 +93,7 @@
    <div class="role_nav">
       <button onclick="window.location.href='p2-user.php'" class="role_icon"><img src="../PHP/getimage.php" class="img-circle" style="position: relative; max-width: 100%; height: 100%;"></button>
       <button onclick="window.location.href='../PHP/imagens_postagens/index.php'" class="role_icon"><img src="../css/camera.png" style="display: block; margin-left: auto; margin-right: auto; position: relative; max-width: 80%; height: 80%; top:1px;"></button>
-      <button onclick="window.location.href='myrole.php'" class="role_icon"></button>
+      <button onclick="window.location.href='myrole.php'" class="role_icon"><img src="../css/img/002-technology.png" style="display: block; margin-left: auto; margin-right: auto; position: relative; max-width: 80%; height: 80%; top:0px;"></button>
    </div>
    <div id="fh5co-page">
       <div id="fh5co-wrap">
@@ -101,6 +101,7 @@
             <div class="container">
                <div class="row">
                   <div id="fh5co-testimony" data-section="testimonies">
+                     <center><H2 style="color:White;">Todas as Postagens:</H2></center>
                      <?php
                         $sql = mysqli_query($conexao,"SELECT * FROM postagens ORDER BY datahora_p DESC");
                         $conta = mysqli_num_rows($sql);
